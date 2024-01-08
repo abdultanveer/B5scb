@@ -87,6 +87,7 @@ class MainActivity : AppCompatActivity() {
     fun openDialer(view: View) {
         var dIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:9876512345"))
         startActivity(dIntent)
+        throw NullPointerException("debug demo")
     }
 
 

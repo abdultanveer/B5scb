@@ -1,5 +1,6 @@
 package com.example.b5scb
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,5 +25,11 @@ class MainActivity : AppCompatActivity() {
 
         var  name:String = nameEt.text.toString()
         statusTv.text = name
+    }
+
+    fun launchHome(view: View) {
+        //Intent homeIntent = new Intent();
+        var homeIntent:Intent = Intent(this,HomeActivity::class.java)
+        startActivity(homeIntent)
     }
 }

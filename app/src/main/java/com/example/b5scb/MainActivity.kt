@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        nameEt = findViewById(R.id.etName)
+        nameEt = findViewById(R.id.etName) //taking handle
         submitBtn = findViewById(R.id.btnSubmmit)
         statusTv = findViewById(R.id.tvStatus)
     }
@@ -29,7 +29,9 @@ class MainActivity : AppCompatActivity() {
 
     fun launchHome(view: View) {
         //Intent homeIntent = new Intent();
+        var data = nameEt.text.toString()
         var homeIntent:Intent = Intent(this,HomeActivity::class.java)
+        homeIntent.putExtra("nkey",data)
         startActivity(homeIntent)
     }
 }

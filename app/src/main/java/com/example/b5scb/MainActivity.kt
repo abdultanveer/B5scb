@@ -85,11 +85,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun openDialer(view: View) {
+
+        add(10,20)
         var dIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:9876512345"))
         startActivity(dIntent)
         throw NullPointerException("debug demo")
     }
 
+    private fun add(i: Int, i1: Int):Int {
+        var c = i +i1
+        var d = c *10
+        return  c +d
+
+    }
 
 
     fun createAlarm(message: String, hour: Int, minutes: Int) {

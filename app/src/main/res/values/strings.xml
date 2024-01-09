@@ -3,4 +3,9 @@
     <string name="nter_name">enter name</string>
     <string name="nter_pin">enter pin</string>
     <string name="submit">submit</string>
+    <string-array name="countries">
+        <item>India</item>
+        <item>USA</item>
+        <item>Australia</item>
+    </string-array>
 </resources>

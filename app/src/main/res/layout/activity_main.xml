@@ -78,4 +78,13 @@
         android:text="alarm"
         app:layout_constraintStart_toEndOf="@+id/etPin"
         app:layout_constraintTop_toBottomOf="@id/btnnDialer" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:entries="@array/countries"
+        android:layout_width="409dp"
+        android:layout_height="422dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStatus"
+         />
 </androidx.constraintlayout.widget.ConstraintLayout>

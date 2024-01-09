@@ -7,7 +7,10 @@ import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerViewActivity : AppCompatActivity() {
 
-    var languages = arrayOf("english","hindi","urdu","kannada","tamil","telgu","malyalam")
+    var languages = arrayOf("english","hindi","urdu","kannada","tamil","telgu","malyalam",
+        "english","hindi","urdu","kannada","tamil","telgu","malyalam",
+        "english","hindi","urdu","kannada","tamil","telgu","malyalam",
+        "english","hindi","urdu","kannada","tamil","telgu","malyalam")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler_view)

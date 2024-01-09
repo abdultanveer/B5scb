@@ -13,7 +13,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
         android:ems="10"
-        android:hint="ennter name"
+        android:hint="@string/nter_name"
         android:inputType="text"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:ems="10"
-        android:hint="ennter pin"
+        android:hint="@string/nter_pin"
         android:inputType="numberPassword"
         app:layout_constraintLeft_toLeftOf="@id/etName"
         app:layout_constraintTop_toBottomOf="@id/etName" />
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:onClick="handleClick"
-        android:text="submit"
+        android:text="@string/submit"
         app:layout_constraintLeft_toLeftOf="@id/etPin"
         app:layout_constraintTop_toBottomOf="@id/etPin" />
 

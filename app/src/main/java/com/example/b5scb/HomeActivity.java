@@ -13,6 +13,8 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Student annsari = new Student("abdul",321,false,87654321);
+        annsari.getName();
          dataTv = findViewById(R.id.tvData);
          //get the inntent  which started this activity
         String data = getIntent().getStringExtra("nkey");

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nter_name">नाम दर्ज करें</string>
+    <string name="nter_pin">पिन दर्ज करें</string>
+    <string name="submit">जमा करना</string>
+</resources>

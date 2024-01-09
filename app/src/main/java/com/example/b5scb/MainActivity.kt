@@ -85,6 +85,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun openDialer(view: View) {
+        var abdul = Student("annsari",123,true,123456)
+        abdul.name
 
         add(10,20)
         var dIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:9876512345"))

@@ -10,9 +10,21 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.activity.viewModels
+import com.example.b5scb.data.Item
 
 //compat -- backwards compatibility
 class MainActivity : AppCompatActivity() {
+
+
+   /* private val viewModel: HomeViewModel by viewModels {
+        HomeViewModelFactory((this?.application as InventoryApplication).database
+            .itemDao())
+    }*/
+
+
+   /* private val viewModel: HomeViewModel by activityViewModels {
+    }*/
     //EditText nameEt;
     lateinit var nameEt:EditText
     lateinit var submitBtn:Button
@@ -115,5 +127,10 @@ class MainActivity : AppCompatActivity() {
 
     fun setAlarm(view: View) {
         createAlarm("b5 anndroid",12,4)
+    }
+
+    fun addItemDb(view: View) {
+        //viewModel.insertItem(Item(11,"grocery",11.11,11))
+
     }
 }

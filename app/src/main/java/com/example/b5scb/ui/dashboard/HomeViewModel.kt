@@ -1,16 +1,29 @@
-package com.example.b5scb
+package com.example.b5scb.ui.dashboard
 
 import android.os.CountDownTimer
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewModelScope
+import com.example.b5scb.data.Item
+import com.example.b5scb.data.ItemDao
+import kotlinx.coroutines.launch
 
-class HomeViewModel: ViewModel() {
+class HomeViewModel(private val itemDao: ItemDao): ViewModel() {
     var TAG = HomeViewModel::class.java.simpleName
     var data = 0
     lateinit var timer: CountDownTimer
     private  val _seconds = MutableLiveData<Int>()
+
+
+
+     fun insertItem(item: Item) {
+        viewModelScope.launch {
+            itemDao.insert(item)
+        }
+    }
 
 
     //timer, updated, textview in activity shud receive  the updates
@@ -36,3 +49,12 @@ class HomeViewModel: ViewModel() {
 
         }
     }
+
+//this factory produces homeview model object
+class HomeViewModelFactory(private val itemDao: ItemDao) : ViewModelProvider.Factory {
+
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        @Suppress("UNCHECKED_CAST")
+        return HomeViewModel(itemDao) as T    }
+}
+

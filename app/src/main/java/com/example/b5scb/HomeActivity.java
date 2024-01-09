@@ -1,15 +1,14 @@
 package com.example.b5scb;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
 import com.example.b5scb.databinding.ActivityHomeBinding;
+import com.example.b5scb.ui.dashboard.HomeViewModel;
 
 public class HomeActivity extends AppCompatActivity {
 

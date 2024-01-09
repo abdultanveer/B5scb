@@ -6,11 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
+import com.example.b5scb.InventoryApplication
+import com.example.b5scb.data.Item
 import com.example.b5scb.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
-
+    private val viewModel: HomeViewModel by activityViewModels {
+        HomeViewModelFactory(
+            (activity?.application as InventoryApplication).database
+                .itemDao()
+        )
+    }
     private var _binding: FragmentDashboardBinding? = null
 
     // This property is only valid between onCreateView and
@@ -32,7 +40,15 @@ class DashboardFragment : Fragment() {
         dashboardViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        binding.btnnAdd.setOnClickListener {
+            addItemDb()
+        }
         return root
+    }
+
+    private fun addItemDb() {
+        viewModel.insertItem(Item(11,"grocery",11.11,11))
     }
 
     override fun onDestroyView() {

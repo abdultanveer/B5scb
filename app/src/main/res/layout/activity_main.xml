@@ -79,12 +79,14 @@
         app:layout_constraintStart_toEndOf="@+id/etPin"
         app:layout_constraintTop_toBottomOf="@id/btnnDialer" />
 
-    <ListView
-        android:id="@+id/listview"
-        android:entries="@array/countries"
-        android:layout_width="409dp"
-        android:layout_height="422dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvStatus"
-         />
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add db"
+        android:onClick="addItemDb"
+        app:layout_constraintBaseline_toBaselineOf="@id/btnHome"
+        app:layout_constraintLeft_toRightOf="@id/btnHome"
+       />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

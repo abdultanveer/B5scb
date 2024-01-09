@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.b5scb.data.Item
 import com.example.b5scb.data.ItemDao
@@ -23,6 +24,11 @@ class HomeViewModel(private val itemDao: ItemDao): ViewModel() {
         viewModelScope.launch {
             itemDao.insert(item)
         }
+    }
+
+    fun retrieveItem(id: Int): LiveData<Item> {
+        return itemDao.getItem(id).asLiveData()
+
     }
 
 

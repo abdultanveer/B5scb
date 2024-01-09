@@ -44,7 +44,17 @@ class DashboardFragment : Fragment() {
         binding.btnnAdd.setOnClickListener {
             addItemDb()
         }
+
+        binding.btnGet.setOnClickListener {
+            getItemDb()
+        }
         return root
+    }
+
+    private fun getItemDb() {
+        viewModel.retrieveItem(11).observe(this.viewLifecycleOwner) {
+                foundItem -> binding.textDashboard.text = foundItem.toString()
+        }
     }
 
     private fun addItemDb() {

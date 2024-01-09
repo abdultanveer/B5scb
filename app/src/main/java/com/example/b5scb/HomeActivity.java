@@ -22,12 +22,15 @@ public class HomeActivity extends AppCompatActivity {
          viewModel = new ViewModelProvider(this).get(HomeViewModel.class);
          //get the inntent  which started this activity
         //String data = getIntent().getStringExtra("nkey");
-        dataTv.setText(""+viewModel.getData());
+       // dataTv.setText(""+viewModel.getData());
     }
 
     public void increment(View view) {
         viewModel.incrementData();
-        dataTv.setText(""+viewModel.getData());
+
+                //viewModel.getData());
+        viewModel.startTime();
+        dataTv.setText(""+viewModel.get_seconds());
 
        /* data++;
         dataTv.setText(""+data);*/

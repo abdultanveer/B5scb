@@ -1,6 +1,8 @@
 package com.example.b5scb;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -23,14 +25,30 @@ public class HomeActivity extends AppCompatActivity {
          //get the inntent  which started this activity
         //String data = getIntent().getStringExtra("nkey");
        // dataTv.setText(""+viewModel.getData());
+     /*   final Observer nameObserver = new Observer() {
+            @Override
+            public void onChanged(@Nullable final int secs) {
+                // Update the UI, in this case, a TextView.
+                dataTv.setText(""+secs);
+            }
+        };*/
+
+        Observer<Integer>  secsObserver = new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+                dataTv.setText(integer.toString());
+            }
+        };
+
+        viewModel.seconds().observe(this, secsObserver);
     }
 
     public void increment(View view) {
-        viewModel.incrementData();
+        //viewModel.incrementData();
 
                 //viewModel.getData());
         viewModel.startTime();
-        dataTv.setText(""+viewModel.get_seconds());
+       // dataTv.setText(""+viewModel.get_seconds());
 
        /* data++;
         dataTv.setText(""+data);*/

@@ -11,6 +11,7 @@ import com.example.b5scb.databinding.ActivityBottomNavBinding
 
 class BottomNavActivity : AppCompatActivity() {
 
+    //view binding
     private lateinit var binding: ActivityBottomNavBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

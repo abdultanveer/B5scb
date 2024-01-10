@@ -18,7 +18,8 @@ class HomeViewModel : ViewModel() {
      fun getMarsPhotos() {
         viewModelScope.launch {
             val listResult = MarsApi.retrofitService.getPhotos()
-            _status.value = listResult
+            _status.value = "Success: ${listResult.size} Mars photos retrieved"+"\n the" +
+                    "first json is ${listResult.get(0).toString()}"
 
         }
     }

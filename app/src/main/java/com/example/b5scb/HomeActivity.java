@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.b5scb.databinding.ActivityHomeBinding;
+import com.example.b5scb.kotlinexs.MyAssistannt;
 import com.example.b5scb.ui.dashboard.HomeViewModel;
 
 public class HomeActivity extends AppCompatActivity {
@@ -48,6 +49,10 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        Person myPerson = new Person();
+       int c = myPerson.add(10,20);
+        MyAssistannt myAssistannt = new MyAssistannt();
+        myPerson.addLong(100l,200l,myAssistannt);
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

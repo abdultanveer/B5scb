@@ -21,6 +21,7 @@ class HomeViewModel(private val itemDao: ItemDao): ViewModel() {
 
 
      fun insertItem(item: Item) {
+         var a =10
         viewModelScope.launch {
             itemDao.insert(item)
         }

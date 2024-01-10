@@ -10,8 +10,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import androidx.activity.viewModels
-import com.example.b5scb.data.Item
+import com.example.b5scb.kotlinexs.Student
 
 //compat -- backwards compatibility
 class MainActivity : AppCompatActivity() {

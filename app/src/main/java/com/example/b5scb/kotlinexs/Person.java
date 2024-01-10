@@ -1,4 +1,4 @@
-package com.example.b5scb;
+package com.example.b5scb.kotlinexs;
 
 import com.example.b5scb.kotlinexs.AddLongCallback;
 
@@ -16,4 +16,12 @@ public class Person {
         }
         callback.onSuccess(a+b);
     }
+
+    String getWeather(String cityName){
+        return "{temp:30, wind : 40kmph}";
+    }
 }
+
+//https://abdul.com/a=10,b=20,m=add
+//{ result: 30 }
+//https://abdul.com/getweather/city=bangalore
